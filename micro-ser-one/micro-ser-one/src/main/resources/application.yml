@@ -1,6 +1,6 @@
 spring:
   application:
-    name: eureka-server
+    name: producer
 
 server:
   port: 8071

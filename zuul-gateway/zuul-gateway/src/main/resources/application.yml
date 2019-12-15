@@ -1,0 +1,25 @@
+
+zuul:
+  #Service will be mapped under the /api URI
+  prefix: /api
+  routes:
+    hello-server:
+      path: /produce/**
+      serviceId: PRODUCER
+    hello-client:
+      path: /consume/**
+      serviceId: CONSUMER
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/
+  instance:
+    hostname: localhost
+
+server:
+  port: 8079
+
+spring:
+  application:
+    name: zuul-service

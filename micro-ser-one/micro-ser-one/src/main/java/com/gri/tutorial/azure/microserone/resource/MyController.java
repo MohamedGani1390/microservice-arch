@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/eureka/server")
+@RequestMapping("/")
 public class MyController {
 
     @GetMapping(path = "/name")

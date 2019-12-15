@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-@RequestMapping("/eureka/client")
+@RequestMapping("/")
 public class MyController {
 
     @Autowired
@@ -16,7 +16,8 @@ public class MyController {
 
     @GetMapping(path = "/hi")
     public String hi() {
-        String url = "http://eureka-server/eureka/server/name";
+        System.out.println("am called");
+        String url = "http://producer/name";
         return restTemplate.getForObject(url, String.class)+ " from eureka client";
     }
 }
